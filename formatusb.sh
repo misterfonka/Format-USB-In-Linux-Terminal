@@ -11,10 +11,6 @@ lsblk -do NAME,SIZE,MODEL | grep -e '^sd'
 read -p "Select a USB drive (enter the corresponding drive label, e.g sda): " drive_label
 
 # Verify the selected drive
-if [[ -z $drive_label ]]; then
-  echo "Invalid drive selection."
-  exit 1
-fi
 clear
 drive_name="/dev/$drive_label"
 echo    "You have selected to erase: $drive_name"
