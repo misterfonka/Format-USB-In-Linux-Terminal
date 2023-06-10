@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Author: misterfonka
+# Purpose: Format a removable USB drive in the linux terminal.
+
 # List attached USB drives
 echo "Attached USB drives:"
 lsblk -do NAME,SIZE,MODEL | grep -e '^sd'
